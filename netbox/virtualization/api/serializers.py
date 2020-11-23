@@ -114,5 +114,5 @@ class VMInterfaceSerializer(TaggedObjectSerializer, ValidatedModelSerializer):
         model = VMInterface
         fields = [
             'id', 'url', 'virtual_machine', 'name', 'enabled', 'mtu', 'mac_address', 'description', 'mode',
-            'untagged_vlan', 'tagged_vlans', 'tags',
+            'untagged_vlan', 'tagged_vlans', 'tags', 'created', 'last_updated',
         ]

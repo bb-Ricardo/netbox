@@ -555,7 +555,7 @@ class InterfaceSerializer(TaggedObjectSerializer, ConnectedEndpointSerializer):
         fields = [
             'id', 'url', 'device', 'name', 'label', 'type', 'enabled', 'lag', 'mtu', 'mac_address', 'mgmt_only',
             'description', 'connected_endpoint_type', 'connected_endpoint', 'connection_status', 'cable', 'mode',
-            'untagged_vlan', 'tagged_vlans', 'tags', 'count_ipaddresses',
+            'untagged_vlan', 'tagged_vlans', 'tags', 'count_ipaddresses', 'created', 'last_updated',
         ]
 
     # TODO: This validation should be handled by Interface.clean()

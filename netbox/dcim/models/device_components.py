@@ -12,7 +12,7 @@ from dcim.choices import *
 from dcim.constants import *
 from dcim.exceptions import CableTraceSplit
 from dcim.fields import MACAddressField
-from extras.models import ObjectChange, TaggedItem
+from extras.models import ChangeLoggedModel, ObjectChange, TaggedItem
 from extras.utils import extras_features
 from utilities.fields import NaturalOrderingField
 from utilities.ordering import naturalize_interface
@@ -562,7 +562,7 @@ class PowerOutlet(CableTermination, ComponentModel):
 # Interfaces
 #
 
-class BaseInterface(models.Model):
+class BaseInterface(ChangeLoggedModel):
     """
     Abstract base class for fields shared by dcim.Interface and virtualization.VMInterface.
     """
